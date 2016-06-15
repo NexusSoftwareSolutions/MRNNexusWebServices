@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c34772d8aa3c469288cbe9e5df9114ba" Name="Diagram1">
+        <EntityTypeShape EntityType="MRNNexusTestModel.AdditionalSupply" Width="1.5" PointX="7.5" PointY="39.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Address" Width="1.5" PointX="3" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Adjuster" Width="1.5" PointX="5.25" PointY="41.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Adjustment" Width="1.5" PointX="10.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.CalendarData" Width="1.5" PointX="13.5" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.CallLog" Width="1.5" PointX="10.5" PointY="30.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.ClaimContact" Width="1.5" PointX="7.5" PointY="28.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.ClaimDocument" Width="1.5" PointX="10.5" PointY="38.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Claim" Width="1.5" PointX="5.25" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.ClaimStatus" Width="1.5" PointX="13.5" PointY="30.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.ClaimVendor" Width="1.5" PointX="13.5" PointY="38.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Customer" Width="1.5" PointX="0.75" PointY="34" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Damage" Width="1.5" PointX="21" PointY="36.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.EmployeeDetail" Width="1.5" PointX="11.25" PointY="17.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Employee" Width="1.5" PointX="6" PointY="22.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Inspection" Width="1.5" PointX="16.5" PointY="32.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.InsuranceCompany" Width="1.5" PointX="3" PointY="28.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Invoice" Width="1.5" PointX="10.5" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.KnockerRespons" Width="1.5" PointX="6" PointY="47.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Lead" Width="1.5" PointX="8.25" PointY="33.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_AdjustmentResults" Width="1.5" PointX="8.25" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_AppointmentTypes" Width="1.5" PointX="11.25" PointY="47" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_ClaimDocumentTypes" Width="1.5" PointX="8.25" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_ClaimStatusTypes" Width="1.5" PointX="11.25" PointY="22.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_DamageTypes" Width="1.5" PointX="18.75" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_EmployeeTypes" Width="1.5" PointX="3.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_InvoiceTypes" Width="1.5" PointX="8.25" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_KnockResponseTypes" Width="1.5" PointX="3.75" PointY="48.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_LeadTypes" Width="1.5" PointX="6" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_PayFrequencies" Width="1.5" PointX="9" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_PaymentDescriptions" Width="1.5" PointX="5.25" PointY="54.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_PaymentTypes" Width="1.5" PointX="5.25" PointY="57.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_PayTypes" Width="1.5" PointX="9" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_Permissions" Width="1.5" PointX="12" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_PlaneTypes" Width="1.5" PointX="16.5" PointY="40" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_Products" Width="1.5" PointX="11.25" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_ProductTypes" Width="1.5" PointX="9" PointY="13" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_RidgeMaterialTypes" Width="1.5" PointX="14.25" PointY="21.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_ScopeTypes" Width="1.5" PointX="14.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_ServiceTypes" Width="1.5" PointX="11.25" PointY="50" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_ShingleTypes" Width="1.5" PointX="14.25" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_UnitOfMeasures" Width="1.5" PointX="13.5" PointY="48.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.LU_VendorTypes" Width="1.5" PointX="6" PointY="18.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.NewRoof" Width="1.5" PointX="13.5" PointY="27.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.OrderItem" Width="1.5" PointX="15.75" PointY="42.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Order" Width="1.5" PointX="13.5" PointY="42.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Payment" Width="1.5" PointX="7.5" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Plane" Width="1.5" PointX="18.75" PointY="33.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Referrer" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Scope" Width="1.5" PointX="16.5" PointY="27.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.SurplusSupply" Width="1.5" PointX="10.5" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.User" Width="1.5" PointX="14.25" PointY="18.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MRNNexusTestModel.Vendor" Width="1.5" PointX="8.25" PointY="16.5" IsExpanded="true" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_AdditionalSupplies_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Addresses_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Claims_BillingID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Claims_PropertyID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Leads_AddressID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Adjusters_InsuranceCompanyID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Adjustments_AdjusterID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_AdjusterID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Adjustments_AdjustmentResultID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Adjustments_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_CalendarData_AppointmentType" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_CalendarData_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_CalendarData_EmployeeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_CalendarData_LeadID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_CallLog_EmployeeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_CallLogs_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_KnockerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_SalesManagerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_SalesPersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimContacts_SupervisorID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimDocuments_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimDocuments_DocTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Damages_DocumentID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Claims_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Claims_InsuranceCompanyID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Claims_LeadID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimStatuses_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimVendors_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Inspections_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Invoices_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_NewRoofs_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Orders_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Payments_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Scopes_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_SurplusSupplies_ClaimID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimStatuses_ClaimStatusTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimVendors_ServiceTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_ClaimVendors_VendorID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Leads_CustomerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Damages_DamageTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Damages_PlaneID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_EmployeeDetails_EmployeeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_EmployeeDetails_PayFrequencyID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_EmployeeDetails_PayTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Employees_EmployeeTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_KnockerResponses_KnockerID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Leads_SalesPersonID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Users_EmployeeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Inspections_RidgeMaterialTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Inspections_ShingleTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Planes_InspectionID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Invoices_InvoiceTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Invoices_VendorID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_KnockerResponse_ResponseTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Leads_KnockerResponseID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Leads_LeadTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Payments_PaymentDescriptionID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Payments_PaymentTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Users_PermissionID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Planes_PlaneTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_NewRoofs_ProductID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_OrderItems_ProductID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Products_ProductTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Products_VendorID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Scopes_ScopeTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_OrderItems_UnitOfMeasureID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_SurplusSupplies_UnitOfMeasureID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Vendors_VendorTypeID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FL_OrderItems_OrderID" ManuallyRouted="false" />
+        <AssociationConnector Association="MRNNexusTestModel.FK_Orders_VendorID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="MRNNexus_Service.MRNNexus_Service" CodeBehind="MRNNexus_Service.svc.cs" %>
