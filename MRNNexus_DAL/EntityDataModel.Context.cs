@@ -2970,5 +2970,32 @@ namespace MRNNexus_DAL
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("proc_UpdateVendor", vendorIDParameter, vendorTypeIDParameter, companyNameParameter, eINParameter, contactFirstNameParameter, contactLastNameParameter, suffixParameter, vendorAddressParameter, zipParameter, phoneParameter, companyPhoneParameter, faxParameter, emailParameter, websiteParameter, generalLiabilityExpirationParameter, successFlag);
         }
+    
+        public virtual ObjectResult<proc_GetRecentClaimsBySalesPersonID_Result> proc_GetRecentClaimsBySalesPersonID(Nullable<int> salesPersonID)
+        {
+            var salesPersonIDParameter = salesPersonID.HasValue ?
+                new ObjectParameter("SalesPersonID", salesPersonID) :
+                new ObjectParameter("SalesPersonID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<proc_GetRecentClaimsBySalesPersonID_Result>("proc_GetRecentClaimsBySalesPersonID", salesPersonIDParameter);
+        }
+    
+        public virtual ObjectResult<proc_GetRecentInspectionsBySalesPersonID_Result> proc_GetRecentInspectionsBySalesPersonID(Nullable<int> salesPersonID)
+        {
+            var salesPersonIDParameter = salesPersonID.HasValue ?
+                new ObjectParameter("SalesPersonID", salesPersonID) :
+                new ObjectParameter("SalesPersonID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<proc_GetRecentInspectionsBySalesPersonID_Result>("proc_GetRecentInspectionsBySalesPersonID", salesPersonIDParameter);
+        }
+    
+        public virtual ObjectResult<proc_GetRecentLeadsBySalesPersonID_Result> proc_GetRecentLeadsBySalesPersonID(Nullable<int> salesPersonID)
+        {
+            var salesPersonIDParameter = salesPersonID.HasValue ?
+                new ObjectParameter("SalesPersonID", salesPersonID) :
+                new ObjectParameter("SalesPersonID", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<proc_GetRecentLeadsBySalesPersonID_Result>("proc_GetRecentLeadsBySalesPersonID", salesPersonIDParameter);
+        }
     }
 }

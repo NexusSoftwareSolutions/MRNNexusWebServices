@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Alyssa\Google Drive\MRNHomes Project\Visual Studio Projects\WebService\MRNNexus\MRNNexus_DAL\EntityDataModel.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Alyssa\Desktop\MRNNexus\WebService\MRNNexus\MRNNexus_DAL\EntityDataModel.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

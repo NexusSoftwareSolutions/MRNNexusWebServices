@@ -435,6 +435,15 @@
     <Compile Include="proc_GetPlanesByInspectionID_Result.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="proc_GetRecentClaimsBySalesPersonID_Result.cs">
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="proc_GetRecentInspectionsBySalesPersonID_Result.cs">
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="proc_GetRecentLeadsBySalesPersonID_Result.cs">
+      <DependentUpon>EntityDataModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="proc_GetReferrerByID_Result.cs">
       <DependentUpon>EntityDataModel.tt</DependentUpon>
     </Compile>

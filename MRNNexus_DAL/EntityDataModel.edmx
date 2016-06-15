@@ -1953,6 +1953,15 @@
         <Function Name="proc_GetPlanesByInspectionID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InfoTech">
           <Parameter Name="InspectionID" Type="int" Mode="In" />
         </Function>
+        <Function Name="proc_GetRecentClaimsBySalesPersonID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InfoTech">
+          <Parameter Name="SalesPersonID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="proc_GetRecentInspectionsBySalesPersonID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InfoTech">
+          <Parameter Name="SalesPersonID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="proc_GetRecentLeadsBySalesPersonID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InfoTech">
+          <Parameter Name="SalesPersonID" Type="int" Mode="In" />
+        </Function>
         <Function Name="proc_GetReferrerByID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="InfoTech">
           <Parameter Name="ReferrerID" Type="int" Mode="In" />
         </Function>
@@ -5440,6 +5449,15 @@
             <Parameter Name="GeneralLiabilityExpiration" Mode="In" Type="DateTime" />
             <Parameter Name="SuccessFlag" Mode="InOut" Type="Boolean" />
           </FunctionImport>
+          <FunctionImport Name="proc_GetRecentClaimsBySalesPersonID" ReturnType="Collection(MRNNexusTestModel.proc_GetRecentClaimsBySalesPersonID_Result)">
+            <Parameter Name="SalesPersonID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="proc_GetRecentInspectionsBySalesPersonID" ReturnType="Collection(MRNNexusTestModel.proc_GetRecentInspectionsBySalesPersonID_Result)">
+            <Parameter Name="SalesPersonID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="proc_GetRecentLeadsBySalesPersonID" ReturnType="Collection(MRNNexusTestModel.proc_GetRecentLeadsBySalesPersonID_Result)">
+            <Parameter Name="SalesPersonID" Mode="In" Type="Int32" />
+          </FunctionImport>
         </EntityContainer>
         <ComplexType Name="proc_Get_LU_AdjustmentResults_Result">
           <Property Type="Int32" Name="AdjustmentResultID" Nullable="false" />
@@ -6445,6 +6463,60 @@
         <ComplexType Name="proc_GetClaimStatusDateByTypeIDAndClaimID_Result">
           <Property Type="Int32" Name="ClaimStatusID" Nullable="false" />
           <Property Type="DateTime" Name="ClaimStatusDate" Nullable="false" Precision="23" />
+        </ComplexType>
+        <ComplexType Name="proc_GetRecentClaimsBySalesPersonID_Result">
+          <Property Type="Int32" Name="ClaimID" Nullable="false" />
+          <Property Type="Int32" Name="CustomerID" Nullable="false" />
+          <Property Type="Int32" Name="LeadID" Nullable="false" />
+          <Property Type="Int32" Name="BillingID" Nullable="false" />
+          <Property Type="Int32" Name="PropertyID" Nullable="false" />
+          <Property Type="Int32" Name="InsuranceCompanyID" Nullable="false" />
+          <Property Type="String" Name="MRNNumber" Nullable="false" MaxLength="50" />
+          <Property Type="DateTime" Name="LossDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="MortgageCompany" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="MortgageAccount" Nullable="true" MaxLength="50" />
+          <Property Type="Boolean" Name="IsOpen" Nullable="false" />
+          <Property Type="Boolean" Name="ContractSigned" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="proc_GetRecentInspectionsBySalesPersonID_Result">
+          <Property Type="Int32" Name="InspectionID" Nullable="false" />
+          <Property Type="Int32" Name="ClaimID" Nullable="false" />
+          <Property Type="Int32" Name="RidgeMaterialTypeID" Nullable="false" />
+          <Property Type="Int32" Name="ShingleTypeID" Nullable="false" />
+          <Property Type="DateTime" Name="InspectionDate" Nullable="false" Precision="23" />
+          <Property Type="Boolean" Name="SkyLights" Nullable="false" />
+          <Property Type="Boolean" Name="Leaks" Nullable="false" />
+          <Property Type="Boolean" Name="GutterDamage" Nullable="false" />
+          <Property Type="Boolean" Name="DrivewayDamage" Nullable="false" />
+          <Property Type="Boolean" Name="MagneticRollers" Nullable="false" />
+          <Property Type="Boolean" Name="IceWaterShield" Nullable="false" />
+          <Property Type="Boolean" Name="EmergencyRepair" Nullable="false" />
+          <Property Type="Double" Name="EmergencyRepairAmount" Nullable="true" />
+          <Property Type="Boolean" Name="QualityControl" Nullable="false" />
+          <Property Type="Boolean" Name="ProtectLandscaping" Nullable="false" />
+          <Property Type="Boolean" Name="RemoveTrash" Nullable="false" />
+          <Property Type="Boolean" Name="FurnishPermit" Nullable="false" />
+          <Property Type="Boolean" Name="CoverPool" Nullable="false" />
+          <Property Type="Boolean" Name="InteriorDamage" Nullable="false" />
+          <Property Type="Boolean" Name="ExteriorDamage" Nullable="false" />
+          <Property Type="Boolean" Name="LightningProtection" Nullable="false" />
+          <Property Type="Boolean" Name="TearOff" Nullable="false" />
+          <Property Type="Boolean" Name="Satellite" Nullable="false" />
+          <Property Type="Boolean" Name="SolarPanels" Nullable="false" />
+          <Property Type="Int32" Name="RoofAge" Nullable="false" />
+          <Property Type="String" Name="Comments" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="proc_GetRecentLeadsBySalesPersonID_Result">
+          <Property Type="Int32" Name="LeadID" Nullable="false" />
+          <Property Type="Int32" Name="LeadTypeID" Nullable="false" />
+          <Property Type="Int32" Name="KnockerResponseID" Nullable="true" />
+          <Property Type="Int32" Name="SalesPersonID" Nullable="false" />
+          <Property Type="Int32" Name="CustomerID" Nullable="false" />
+          <Property Type="Int32" Name="AddressID" Nullable="false" />
+          <Property Type="DateTime" Name="LeadDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="Status" Nullable="false" MaxLength="1" />
+          <Property Type="Int32" Name="CreditToID" Nullable="true" />
+          <Property Type="String" Name="Temperature" Nullable="false" MaxLength="1" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -8574,6 +8646,72 @@
           <FunctionImportMapping FunctionImportName="proc_UpdateSurplusSupplies" FunctionName="MRNNexusTestModel.Store.proc_UpdateSurplusSupplies" />
           <FunctionImportMapping FunctionImportName="proc_UpdateUser" FunctionName="MRNNexusTestModel.Store.proc_UpdateUser" />
           <FunctionImportMapping FunctionImportName="proc_UpdateVendor" FunctionName="MRNNexusTestModel.Store.proc_UpdateVendor" />
+          <FunctionImportMapping FunctionImportName="proc_GetRecentClaimsBySalesPersonID" FunctionName="MRNNexusTestModel.Store.proc_GetRecentClaimsBySalesPersonID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MRNNexusTestModel.proc_GetRecentClaimsBySalesPersonID_Result">
+                <ScalarProperty Name="ClaimID" ColumnName="ClaimID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="LeadID" ColumnName="LeadID" />
+                <ScalarProperty Name="BillingID" ColumnName="BillingID" />
+                <ScalarProperty Name="PropertyID" ColumnName="PropertyID" />
+                <ScalarProperty Name="InsuranceCompanyID" ColumnName="InsuranceCompanyID" />
+                <ScalarProperty Name="MRNNumber" ColumnName="MRNNumber" />
+                <ScalarProperty Name="LossDate" ColumnName="LossDate" />
+                <ScalarProperty Name="MortgageCompany" ColumnName="MortgageCompany" />
+                <ScalarProperty Name="MortgageAccount" ColumnName="MortgageAccount" />
+                <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
+                <ScalarProperty Name="ContractSigned" ColumnName="ContractSigned" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_GetRecentInspectionsBySalesPersonID" FunctionName="MRNNexusTestModel.Store.proc_GetRecentInspectionsBySalesPersonID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MRNNexusTestModel.proc_GetRecentInspectionsBySalesPersonID_Result">
+                <ScalarProperty Name="InspectionID" ColumnName="InspectionID" />
+                <ScalarProperty Name="ClaimID" ColumnName="ClaimID" />
+                <ScalarProperty Name="RidgeMaterialTypeID" ColumnName="RidgeMaterialTypeID" />
+                <ScalarProperty Name="ShingleTypeID" ColumnName="ShingleTypeID" />
+                <ScalarProperty Name="InspectionDate" ColumnName="InspectionDate" />
+                <ScalarProperty Name="SkyLights" ColumnName="SkyLights" />
+                <ScalarProperty Name="Leaks" ColumnName="Leaks" />
+                <ScalarProperty Name="GutterDamage" ColumnName="GutterDamage" />
+                <ScalarProperty Name="DrivewayDamage" ColumnName="DrivewayDamage" />
+                <ScalarProperty Name="MagneticRollers" ColumnName="MagneticRollers" />
+                <ScalarProperty Name="IceWaterShield" ColumnName="IceWaterShield" />
+                <ScalarProperty Name="EmergencyRepair" ColumnName="EmergencyRepair" />
+                <ScalarProperty Name="EmergencyRepairAmount" ColumnName="EmergencyRepairAmount" />
+                <ScalarProperty Name="QualityControl" ColumnName="QualityControl" />
+                <ScalarProperty Name="ProtectLandscaping" ColumnName="ProtectLandscaping" />
+                <ScalarProperty Name="RemoveTrash" ColumnName="RemoveTrash" />
+                <ScalarProperty Name="FurnishPermit" ColumnName="FurnishPermit" />
+                <ScalarProperty Name="CoverPool" ColumnName="CoverPool" />
+                <ScalarProperty Name="InteriorDamage" ColumnName="InteriorDamage" />
+                <ScalarProperty Name="ExteriorDamage" ColumnName="ExteriorDamage" />
+                <ScalarProperty Name="LightningProtection" ColumnName="LightningProtection" />
+                <ScalarProperty Name="TearOff" ColumnName="TearOff" />
+                <ScalarProperty Name="Satellite" ColumnName="Satellite" />
+                <ScalarProperty Name="SolarPanels" ColumnName="SolarPanels" />
+                <ScalarProperty Name="RoofAge" ColumnName="RoofAge" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="proc_GetRecentLeadsBySalesPersonID" FunctionName="MRNNexusTestModel.Store.proc_GetRecentLeadsBySalesPersonID">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="MRNNexusTestModel.proc_GetRecentLeadsBySalesPersonID_Result">
+                <ScalarProperty Name="LeadID" ColumnName="LeadID" />
+                <ScalarProperty Name="LeadTypeID" ColumnName="LeadTypeID" />
+                <ScalarProperty Name="KnockerResponseID" ColumnName="KnockerResponseID" />
+                <ScalarProperty Name="SalesPersonID" ColumnName="SalesPersonID" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="AddressID" ColumnName="AddressID" />
+                <ScalarProperty Name="LeadDate" ColumnName="LeadDate" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="CreditToID" ColumnName="CreditToID" />
+                <ScalarProperty Name="Temperature" ColumnName="Temperature" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
