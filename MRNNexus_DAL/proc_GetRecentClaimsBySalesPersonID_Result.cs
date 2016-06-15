@@ -25,5 +25,6 @@ namespace MRNNexus_DAL
         public string MortgageAccount { get; set; }
         public bool IsOpen { get; set; }
         public bool ContractSigned { get; set; }
+        public string InsuranceClaimNumber { get; set; }
     }
 }

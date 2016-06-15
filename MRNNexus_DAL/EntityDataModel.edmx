@@ -6477,6 +6477,7 @@
           <Property Type="String" Name="MortgageAccount" Nullable="true" MaxLength="50" />
           <Property Type="Boolean" Name="IsOpen" Nullable="false" />
           <Property Type="Boolean" Name="ContractSigned" Nullable="false" />
+          <Property Type="String" Name="InsuranceClaimNumber" Nullable="true" MaxLength="255" />
         </ComplexType>
         <ComplexType Name="proc_GetRecentInspectionsBySalesPersonID_Result">
           <Property Type="Int32" Name="InspectionID" Nullable="false" />
@@ -8661,6 +8662,7 @@
                 <ScalarProperty Name="MortgageAccount" ColumnName="MortgageAccount" />
                 <ScalarProperty Name="IsOpen" ColumnName="IsOpen" />
                 <ScalarProperty Name="ContractSigned" ColumnName="ContractSigned" />
+                <ScalarProperty Name="InsuranceClaimNumber" ColumnName="InsuranceClaimNumber" />
               </ComplexTypeMapping>
             </ResultMapping>
           </FunctionImportMapping>
