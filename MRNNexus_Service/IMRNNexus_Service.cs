@@ -716,6 +716,24 @@ namespace MRNNexus_Service
         List<DTO_Claim> GetAllInactiveClaims();
         #endregion GetAllInactiveClaims
 
+        #region GetRecentClaimsBySalesPersonID
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/GetRecentClaimsBySalesPersonID", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        List<DTO_Claim> GetRecentClaimsBySalesPersonID(DTO_Employee token);
+        #endregion GetRecentClaimsBySalesPersonID
+
+        #region GetRecentLeadsBySalesPersonID
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/GetRecentLeadsBySalesPersonID", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        List<DTO_Lead> GetRecentLeadsBySalesPersonID(DTO_Employee token);
+        #endregion GetRecentLeadsBySalesPersonID
+
+        #region GetRecentInspectionsBySalesPersonID
+        [OperationContract]
+        [WebInvoke(Method = "POST", UriTemplate = "/GetRecentInspectionsBySalesPersonID", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json)]
+        List<DTO_Inspection> GetRecentInspectionsBySalesPersonID(DTO_Employee token);
+        #endregion GetRecentInspectionsBySalesPersonID
+
         #endregion
 
         #region UPDATES

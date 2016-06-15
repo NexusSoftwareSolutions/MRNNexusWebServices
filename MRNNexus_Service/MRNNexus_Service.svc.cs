@@ -4015,6 +4015,148 @@ namespace MRNNexus_Service
         }
         #endregion
 
+        #region GetRecentClaimsBySalesPersonID
+        public List<DTO_Claim> GetRecentClaimsBySalesPersonID(DTO_Employee token)
+        {
+            using (MRNNexusTestEntities context = new MRNNexusTestEntities())
+            {
+                List<DTO_Claim> returnList = new List<DTO_Claim>();
+                try
+                {
+                    var results = context.proc_GetRecentClaimsBySalesPersonID(token.EmployeeID).ToList();
+
+                    foreach (var entity in results)
+                    {
+                        DTO_Claim s = new DTO_Claim
+                        {
+                            ClaimID = entity.ClaimID,
+                            BillingID = entity.BillingID,
+                            CustomerID = entity.CustomerID,
+                            InsuranceClaimNumber = entity.InsuranceClaimNumber,
+                            InsuranceCompanyID = entity.InsuranceCompanyID,
+                            LeadID = entity.LeadID,
+                            LossDate = entity.LossDate,
+                            MortgageAccount = entity.MortgageAccount,
+                            MortgageCompany = entity.MortgageCompany,
+                            MRNNumber = entity.MRNNumber,
+                            PropertyID = entity.PropertyID,
+                            IsOpen = entity.IsOpen,
+                            ContractSigned = entity.ContractSigned,
+                            SuccessFlag = true
+                        };
+
+                        returnList.Add(s);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    DTO_Claim obj = (DTO_Claim)populateException(ex, new DTO_Claim());
+                    returnList.Add(obj);
+                }
+
+                return returnList;
+            }
+        }
+        #endregion
+
+        #region GetRecentLeadsBySalesPersonID
+        public List<DTO_Lead> GetRecentLeadsBySalesPersonID(DTO_Employee token)
+        {
+            using (MRNNexusTestEntities context = new MRNNexusTestEntities())
+            {
+                List<DTO_Lead> returnList = new List<DTO_Lead>();
+                try
+                {
+                    var results = context.proc_GetRecentLeadsBySalesPersonID(token.EmployeeID).ToList();
+
+                    foreach (var entity in results)
+                    {
+                        DTO_Lead l = new DTO_Lead
+                        {
+                            LeadID = entity.LeadID,
+                            LeadTypeID = entity.LeadTypeID,
+                            KnockerResponseID = entity.KnockerResponseID,
+                            SalesPersonID = entity.SalesPersonID,
+                            CustomerID = entity.CustomerID,
+                            AddressID = entity.AddressID,
+                            LeadDate = entity.LeadDate,
+                            Status = entity.Status,
+                            CreditToID = entity.CreditToID,
+                            Temperature = entity.Temperature,
+                            SuccessFlag = true
+                        };
+
+                        returnList.Add(l);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    DTO_Lead obj = (DTO_Lead)populateException(ex, new DTO_Lead());
+                    returnList.Add(obj);
+                }
+
+                return returnList;
+            }
+        }
+        #endregion
+
+        #region GetRecentInspectionsBySalesPersonID
+        public List<DTO_Inspection> GetRecentInspectionsBySalesPersonID(DTO_Employee token)
+        {
+            using (MRNNexusTestEntities context = new MRNNexusTestEntities())
+            {
+                List<DTO_Inspection> returnList = new List<DTO_Inspection>();
+                try
+                {
+                    var results = context.proc_GetRecentInspectionsBySalesPersonID(token.EmployeeID).ToList();
+
+                    foreach (var entity in results)
+                    {
+                        DTO_Inspection s = new DTO_Inspection
+                        {
+                            ClaimID = entity.ClaimID,
+                            Comments = entity.Comments,
+                            CoverPool = entity.CoverPool,
+                            DrivewayDamage = entity.DrivewayDamage,
+                            EmergencyRepair = entity.EmergencyRepair,
+                            EmergencyRepairAmount = entity.EmergencyRepairAmount,
+                            ExteriorDamage = entity.ExteriorDamage,
+                            FurnishPermit = entity.FurnishPermit,
+                            GutterDamage = entity.GutterDamage,
+                            IceWaterShield = entity.IceWaterShield,
+                            InspectionDate = entity.InspectionDate,
+                            InteriorDamage = entity.InteriorDamage,
+                            InspectionID = entity.InspectionID,
+                            Leaks = entity.Leaks,
+                            MagneticRollers = entity.MagneticRollers,
+                            ProtectLandscaping = entity.ProtectLandscaping,
+                            QualityControl = entity.QualityControl,
+                            RemoveTrash = entity.RemoveTrash,
+                            RidgeMaterialTypeID = entity.RidgeMaterialTypeID,
+                            RoofAge = entity.RoofAge,
+                            Satellite = entity.Satellite,
+                            ShingleTypeID = entity.ShingleTypeID,
+                            SkyLights = entity.SkyLights,
+                            SolarPanels = entity.SolarPanels,
+                            TearOff = entity.TearOff,
+                            LighteningProtection = entity.LightningProtection,
+                            SuccessFlag = true
+                        };
+
+                        returnList.Add(s);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    DTO_Inspection obj = (DTO_Inspection)populateException(ex, new DTO_Inspection());
+                    returnList.Add(obj);
+                }
+
+                return returnList;
+            }
+        }
+        #endregion
+
         #endregion
 
         #region UPDATES
